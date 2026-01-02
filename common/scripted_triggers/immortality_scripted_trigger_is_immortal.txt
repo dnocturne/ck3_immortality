@@ -1,0 +1,71 @@
+﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+is_immortal_core = {
+	###The 5 Defined immortality traits only
+	OR = {
+		####Immortality Revised and Immortal Maldives - Even if another mod later in the load order has redifened it to be not-immortal
+		has_trait = immortality_sterile
+		has_trait = immortality
+		has_trait = immortality_genetic
+		####Daddy Pika's Cheat Menu and Other generic Immortality Mods - Even if another mod later in the load order has redifened it to be not-immortal
+		has_trait = immortal
+		has_trait = ageless
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+is_immortal_extended = {
+	OR = {
+		###Any other mod's trait that is defined as immortal
+		is_immortal = yes
+		####Immortality Revised and Immortal Maldives - Even if another mod later in the load order has redifened it to be not-immortal
+		has_trait = immortality_sterile
+		has_trait = immortality
+		has_trait = immortality_genetic
+		####Daddy Pika's Cheat Menu and Other generic Immortality Mods - Even if another mod later in the load order has redefened it to be not-immortal
+		has_trait = immortal
+		has_trait = ageless
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+is_lifetime_lock_removal_needed = {
+	OR = {
+		has_character_flag = "used_lifetime_invasion"
+		has_character_flag = "used_lifetime_subjugation"
+		has_character_flag = "declared_major_religious_war_flag"
+
+		has_character_flag = "has_created_a_faith"
+		has_character_flag = "converted_culture_this_lifetime"
+
+		has_character_flag = "has_refunded_perks"
+
+		is_lifetime_vassal_lock_removal_needed = yes
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+is_lifetime_vassal_lock_removal_needed = {
+	OR = {
+		#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occuring with vassal_contract_is_blocked_from_modification
+
+		#Self - for upstream feudal contract with liege, if present
+		trigger_if = {
+			limit = {
+				exists = liege
+				is_ruler = yes
+				vassal_contract_has_modifiable_obligations = yes
+			}
+			vassal_contract_is_blocked_from_modification = yes
+		}
+
+		#Vassals - Downstream
+		any_vassal = {
+			trigger_if = {
+				limit = {
+					exists = liege
+					is_ruler = yes
+					vassal_contract_has_modifiable_obligations = yes
+				}
+			}
+			vassal_contract_is_blocked_from_modification = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=

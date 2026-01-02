@@ -1,0 +1,221 @@
+﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_core = no
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = immortality_decision_effect_tooltip
+		save_scope_as = scope_set_age
+		trigger_event = immortality_add.1
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_change_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_core = yes
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = immortality_change_decision_effect_tooltip
+		save_scope_as = scope_set_age
+		trigger_event = immortality_add.1
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_disease_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_core = yes
+		NOT = {has_character_flag = immune_to_disease}
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = immortality_disease_decision_effect_tooltip
+		add_character_flag = immune_to_disease
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_removal_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_core = yes
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = immortality_removal_decision_effect_tooltip
+		remove_immortality = yes
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_extended = yes
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = restore_body_decision_effect_tooltip
+
+		#code is at common\scripted_effects\immortality_scripted_effect_restorebodyandmind.txt
+		immortality_restorebodyandmind_effect = yes
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_auto_on_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_extended = yes
+		NOT = {has_character_flag = restore_body_auto}
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = restore_body_decision_effect_tooltip
+
+		#code is at common\scripted_effects\immortality_scripted_effect_restorebodyandmind.txt
+		immortality_restorebodyandmind_effect = yes
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_auto_off_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_extended = yes
+		has_character_flag = restore_body_auto
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = restore_body_decision_effect_tooltip
+
+		#code is at common\scripted_effects\immortality_scripted_effect_restorebodyandmind.txt
+		immortality_restorebodyandmind_effect = yes
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_extended = yes
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		custom_tooltip = set_age_decision_effect_tooltip
+		save_scope_as = scope_set_age
+		trigger_event = immortality_set_age.1
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+lifetime_lock_removal_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+	is_shown = {
+		#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+		is_immortal_extended = yes
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	is_valid = {
+		is_lifetime_lock_removal_needed = yes
+	}
+
+	effect = {
+		custom_tooltip = lifetime_lock_removal_decision_effect_tooltip
+		save_scope_as = scope_set_age
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_hide_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+	}
+
+	effect = {
+		set_global_variable = {
+			name = immortality_hide
+			value = 1
+		}
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_show_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+	is_shown = {
+		has_global_variable = immortality_hide
+	}
+
+	effect = {
+		remove_global_variable = immortality_hide
+	}
+
+	ai_check_interval = 0
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=

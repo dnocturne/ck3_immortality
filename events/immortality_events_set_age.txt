@@ -1,0 +1,865 @@
+﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+namespace = immortality_add
+immortality_add.1 = {
+	type = character_event
+	title = immortality_add.1.t
+	desc = immortality_add.1.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = scope:scope_set_age
+		animation = personality_honorable
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Add Normal
+	option = {
+		name = immortality_add.1.option.add_normal
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = no
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality
+			add_immortality_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Add Genetic
+	option = {
+		name = immortality_add.1.option.add_genetic
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = no
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality_genetic
+			add_immortality_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Add Sterile
+	option = {
+		name = immortality_add.1.option.add_sterile
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = no
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality_sterile
+			add_immortality_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Change to Normal
+	option = {
+		name = immortality_add.1.option.change_normal
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = yes
+				NOT = {has_trait = immortality}
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality
+			change_immortality_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Change to Genetic
+	option = {
+		name = immortality_add.1.option.change_genetic
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = yes
+				NOT = {has_trait = immortality_genetic}
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality_genetic
+			change_immortality_genetic_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Change to Sterile
+	option = {
+		name = immortality_add.1.option.change_sterile
+
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = yes
+				NOT = {has_trait = immortality_sterile}
+			}
+		}
+
+		scope:scope_set_age = {
+			add_trait = immortality_sterile
+			change_immortality_sterile_supplement = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	#Remove
+	option = {
+		name = immortality_add.1.option.remove
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = yes
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_immortality = yes
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_add.1.option.cancel
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = no
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_add.1.option.cancel2
+		trigger = {
+			scope:scope_set_age = {
+				is_immortal_core = yes
+			}
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+namespace = immortality_set_age
+immortality_set_age.1 = {
+	type = character_event
+	title = immortality_set_age.1.t
+	desc = immortality_set_age.1.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = scope:scope_set_age
+		animation = personality_honorable
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a016
+		scope:scope_set_age = {
+			set_immortal_age = 16
+			set_variable = {
+				name = immortal_age
+				value = 16
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a020
+		scope:scope_set_age = {
+			set_immortal_age = 20
+			set_variable = {
+				name = immortal_age
+				value = 20
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a025
+		scope:scope_set_age = {
+			set_immortal_age = 25
+			set_variable = {
+				name = immortal_age
+				value = 25
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a030
+		scope:scope_set_age = {
+			set_immortal_age = 30
+			set_variable = {
+				name = immortal_age
+				value = 30
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a040
+		scope:scope_set_age = {
+			set_immortal_age = 40
+			set_variable = {
+				name = immortal_age
+				value = 40
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a050
+		scope:scope_set_age = {
+			set_immortal_age = 50
+			set_variable = {
+				name = immortal_age
+				value = 50
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a070
+		scope:scope_set_age = {
+			set_immortal_age = 70
+			set_variable = {
+				name = immortal_age
+				value = 70
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.a090
+		scope:scope_set_age = {
+			set_immortal_age = 90
+			set_variable = {
+				name = immortal_age
+				value = 90
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.1.option.p
+		trigger_event = immortality_set_age.2
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_set_age.2 = {
+	type = character_event
+	title = immortality_set_age.2.t
+	desc = immortality_set_age.2.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = scope:scope_set_age
+		animation = personality_honorable
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a035
+		scope:scope_set_age = {
+			set_immortal_age = 35
+			set_variable = {
+				name = immortal_age
+				value = 35
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a060
+		scope:scope_set_age = {
+			set_immortal_age = 60
+			set_variable = {
+				name = immortal_age
+				value = 60
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a080
+		scope:scope_set_age = {
+			set_immortal_age = 80
+			set_variable = {
+				name = immortal_age
+				value = 80
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a110
+		scope:scope_set_age = {
+			set_immortal_age = 110
+			set_variable = {
+				name = immortal_age
+				value = 110
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a012
+		scope:scope_set_age = {
+			set_immortal_age = 12
+			set_variable = {
+				name = immortal_age
+				value = 12
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a008
+		scope:scope_set_age = {
+			set_immortal_age = 8
+			set_variable = {
+				name = immortal_age
+				value = 8
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a004
+		scope:scope_set_age = {
+			set_immortal_age = 4
+			set_variable = {
+				name = immortal_age
+				value = 4
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.a001
+		scope:scope_set_age = {
+			set_immortal_age = 1
+			set_variable = {
+				name = immortal_age
+				value = 1
+			}
+		}
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.p
+		trigger_event = immortality_set_age.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.2.option.f
+		trigger_event = immortality_set_age.3
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_set_age.3 = {
+	type = character_event
+	title = immortality_set_age.3.t
+	desc = immortality_set_age.3.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = scope:scope_set_age
+		animation = personality_honorable
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+
+		#If age variable does not exist, then set both the variable and the immortal age both to 20
+        scope:scope_set_age = {
+            if = {
+                limit = {
+					NOT = {
+						exists = var:immortal_age
+					}
+				}
+				set_immortal_age = 20
+                set_variable = {
+                    name = immortal_age
+                    value = 20
+                }
+            }
+        }
+    }
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.a1
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age<120
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age<=119
+				}
+				change_variable = {
+					name = immortal_age
+					add = 1
+				}
+				set_immortal_age = var:immortal_age
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.s1
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age>0
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age>=1
+				}
+				change_variable = {
+					name = immortal_age
+					add = -1
+				}
+				set_immortal_age = var:immortal_age
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.a5
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age<119
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age<=117
+				}
+				change_variable = {
+					name = immortal_age
+					add = 5
+				}
+				set_immortal_age = var:immortal_age
+			}
+			else = {
+				set_immortal_age = 120
+                set_variable = {
+                    name = immortal_age
+                    value = 120
+                }
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.s5
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age>1
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age>=3
+				}
+				change_variable = {
+					name = immortal_age
+					add = -5
+				}
+				set_immortal_age = var:immortal_age
+			}
+			else = {
+                set_variable = {
+                    name = immortal_age
+                    value = 0
+                }
+				set_immortal_age = 0
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.a20
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age<110
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age<=100
+				}
+				change_variable = {
+					name = immortal_age
+					add = 20
+				}
+				set_immortal_age = var:immortal_age
+			}
+			else = {
+                set_variable = {
+                    name = immortal_age
+                    value = 120
+                }
+				set_immortal_age = 120
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.s20
+		trigger = {
+			scope:scope_set_age = {
+				var:immortal_age>10
+			}
+		}
+
+		scope:scope_set_age = {
+			if = {
+				limit = {
+					var:immortal_age>=20
+				}
+				change_variable = {
+					name = immortal_age
+					add = -20
+				}
+				set_immortal_age = var:immortal_age
+			}
+			else = {
+                set_variable = {
+                    name = immortal_age
+                    value = 0
+                }
+				set_immortal_age = 0
+			}
+		}
+		trigger_event = immortality_set_age.3
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_set_age.3.option.p
+		trigger_event = immortality_set_age.1
+	}
+
+	option = {
+		name = immortality_set_age.3.option.d
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+namespace = immortality_lifetime_lock_removal
+
+immortality_lifetime_lock_removal.1 = {
+	type = character_event
+	title = immortality_lifetime_lock_removal.1.t
+	desc = immortality_lifetime_lock_removal.1.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = scope:scope_set_age
+		animation = personality_honorable
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.w1
+		trigger = {
+			scope:scope_set_age = {
+				OR = {
+					has_character_flag = used_lifetime_invasion
+				}
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = used_lifetime_invasion
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.w2
+		trigger = {
+			scope:scope_set_age = {
+				OR = {
+					has_character_flag = used_lifetime_subjugation
+				}
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = used_lifetime_subjugation
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.w3
+		trigger = {
+			scope:scope_set_age = {
+				OR = {
+					has_character_flag = declared_major_religious_war_flag
+				}
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = declared_major_religious_war_flag
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.f
+		trigger = {
+			scope:scope_set_age = {
+				has_character_flag = has_created_a_faith
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = has_created_a_faith
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.c
+		trigger = {
+			scope:scope_set_age = {
+				has_character_flag = converted_culture_this_lifetime
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = "converted_culture_this_lifetime"
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.p
+		trigger = {
+			scope:scope_set_age = {
+				has_character_flag = has_refunded_perks
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_character_flag = "has_refunded_perks"
+			remove_character_flag = "had_stewardship_domain_special_1001_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_1101_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_1301_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_1401_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_1500_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_3010_this_lifetime"
+			remove_character_flag = "had_stewardship_domain_special_8001_this_lifetime"
+			remove_character_flag = "had_stewardship_duty_special_1201_this_lifetime"
+			remove_character_flag = "had_stewardship_duty_special_2000_this_lifetime"
+			remove_character_flag = "had_intrigue_dread_1101_this_lifetime"
+			remove_character_flag = "completed_event_intrigue_dread_4001"
+			remove_character_flag = "had_intrigue_scheming_special_1001_this_lifetime"
+			remove_character_flag = "had_intrigue_scheming_special_1301_this_lifetime"
+			remove_character_flag = "had_intrigue_temptation_special_1000_this_lifetime"
+			remove_character_flag = "had_learning_medicine_special_1001_this_lifetime"
+			remove_character_flag = "had_learning_scholarship_special_2001_this_lifetime"
+			remove_character_flag = "had_learning_theology_special_1001_this_lifetime"
+			remove_character_flag = "had_diplomacy_family_special_2200_this_lifetime"
+			remove_character_flag = "had_diplomacy_foreign_special_1017_this_lifetime"
+			remove_character_flag = "had_diplomacy_majesty_special_1010_this_lifetime"
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.v
+		trigger = {
+			scope:scope_set_age = {
+				is_lifetime_vassal_lock_removal_needed = yes
+			}
+		}
+
+		scope:scope_set_age = {
+			#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occuring with vassal_contract_is_blocked_from_modification
+
+			#Self - for upstream feudal contract with liege, if present
+			if = {
+				limit = {
+					exists = liege
+					is_ruler = yes
+					vassal_contract_has_modifiable_obligations = yes
+				}
+				if = {
+					limit = {
+						vassal_contract_is_blocked_from_modification = yes
+					}
+					set_vassal_contract_modification_blocked = no
+				}
+			}
+
+			#Vassals - Downstream
+			every_vassal = {
+				limit = {
+					vassal_contract_has_modifiable_obligations = yes
+					vassal_contract_is_blocked_from_modification = yes
+				}
+				if = {
+					limit = {
+						exists = liege
+						is_ruler = yes
+						vassal_contract_has_modifiable_obligations = yes
+					}
+					set_vassal_contract_modification_blocked = no
+				}
+			}
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.d
+	}
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+namespace = immortality_genetic_AgeTo20
+
+#Fires on character birthday
+immortality_genetic_AgeTo20.1 = {
+	type = character_event
+	hidden = yes
+
+	#Only for those with immortality_genetic that do not have a age-set variable
+	#Scenario exists when born with the trait or when the trait is added via ruler designer
+	trigger = {
+		NOT = { has_variable = immortal_age }
+		has_trait = "immortality_genetic"
+	}
+
+	immediate = {
+		set_variable = {
+			name = test_age
+			value = age
+		}
+		##Add disease immunity flag if not present
+		if = {
+			limit = {
+				NOT = {has_character_flag = immune_to_disease}
+			}
+			add_character_flag = immune_to_disease
+		}
+		##Age to 20
+		if = {
+			limit = {age < 20}
+			set_immortal_age = age
+		}
+		##Freeze at 20
+		else_if = {
+			limit = {age = 20}
+			set_immortal_age = age
+			set_variable = {
+				name = immortal_age
+				value = age
+			}
+		}
+		##For immortality_genetic trait added via ruler designer while over 20
+		else = {
+			set_variable = {
+				name = immortal_age
+				value = age
+			}
+			change_variable = {
+				name = immortal_age
+				add = -1
+			}
+			set_immortal_age = var:immortal_age
+		}
+	}
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+namespace = immortality_AutoRestoreBodyAndMind
+
+#Fires on character birthday
+immortality_AutoRestoreBodyAndMind.1 = {
+	type = character_event
+	hidden = yes
+
+	#Only for those with immortality_genetic that do not have a age-set variable
+	#Scenario exists when born with the trait or when the trait is added via ruler designer
+	trigger = {
+		is_immortal = yes
+		has_character_flag = restore_body_auto
+	}
+
+	immediate = {
+		immortality_restorebodyandmind_effect = yes
+	}
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+
+#Fires on character birthday
+immortality_AutoRestoreBodyAndMind.2 = {
+	type = character_event
+	hidden = yes
+
+	#Only for those with immortality_genetic that do not have a age-set variable
+	#Scenario exists when born with the trait or when the trait is added via ruler designer
+	trigger = {
+		is_immortal = yes
+		has_character_flag = restore_body_extended_auto
+	}
+
+	immediate = {
+		immortality_restorebodyandmind_extended_effect = yes
+	}
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=

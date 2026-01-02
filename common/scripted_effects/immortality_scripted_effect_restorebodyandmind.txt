@@ -1,0 +1,515 @@
+﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_restorebodyandmind_effect = {
+	#Wounds
+	if = {limit = {has_trait = wounded_1} remove_trait = wounded_1}
+	if = {limit = {has_trait = wounded_2} remove_trait = wounded_2}
+	if = {limit = {has_trait = wounded_3} remove_trait = wounded_3}
+
+	#Disfigurement
+	if = {limit = {has_trait = maimed} remove_trait = maimed}
+	if = {limit = {has_trait = one_eyed} remove_trait = one_eyed}
+	if = {limit = {has_trait = one_legged} remove_trait = one_legged}
+	if = {limit = {has_trait = disfigured} remove_trait = disfigured}
+	if = {limit = {has_trait = blind} remove_trait = blind}
+
+	#Disability
+	if = {limit = {has_trait = infirm} remove_trait = infirm}
+	if = {limit = {has_trait = incapable} remove_trait = incapable}
+	if = {limit = {has_trait = scarred} remove_trait = scarred}
+	if = {limit = {has_trait = eunuch} remove_trait = eunuch}
+
+	#Diseases
+	if = {limit = {has_trait = gout_ridden} remove_trait = gout_ridden}
+	if = {limit = {has_trait = consumption} remove_trait = consumption}
+	if = {limit = {has_trait = cancer} remove_trait = cancer}
+	if = {limit = {has_trait = typhus} remove_trait = typhus}
+	if = {limit = {has_trait = bubonic_plague} remove_trait = bubonic_plague}
+	if = {limit = {has_trait = smallpox} remove_trait = smallpox}
+	if = {limit = {has_trait = leper} remove_trait = leper}
+	if = {limit = {has_trait = lovers_pox} remove_trait = lovers_pox}
+	if = {limit = {has_trait = early_great_pox} remove_trait = early_great_pox}
+	if = {limit = {has_trait = great_pox} remove_trait = great_pox}
+	if = {limit = {has_trait = pneumonic} remove_trait = pneumonic}
+	if = {limit = {has_trait = ill} remove_trait = ill}
+	if = {limit = {has_trait = sickly} remove_trait = sickly}
+
+	#Mental Illness
+	if = {limit = {has_trait = possessed_genetic} remove_trait = possessed_genetic}
+	if = {limit = {has_trait = possessed_1} remove_trait = possessed_1}
+	if = {limit = {has_trait = lunatic_genetic} remove_trait = lunatic_genetic}
+	if = {limit = {has_trait = lunatic_1} remove_trait = lunatic_1}
+	if = {limit = {has_trait = depressed_genetic} remove_trait = depressed_genetic}
+	if = {limit = {has_trait = depressed_1} remove_trait = depressed_1}
+
+	#Princes of Darkness
+	#if = {limit = {has_trait = torpor} remove_trait = torpor}
+
+	#Health Modifiers - General
+	if = {limit = {has_character_modifier = infected_wound_modifier} remove_character_modifier = infected_wound_modifier}
+	if = {limit = {has_character_modifier = gangrene_modifier} remove_character_modifier = gangrene_modifier}
+	if = {limit = {has_character_modifier = rejected_from_marriage_bed_modifier} remove_character_modifier = rejected_from_marriage_bed_modifier}
+	if = {limit = {has_character_modifier = exhausted_modifier} remove_character_modifier = exhausted_modifier}
+	if = {limit = {has_character_modifier = low_social_energy_modifier} remove_character_modifier = low_social_energy_modifier}
+	if = {limit = {has_character_modifier = lunatic_made_of_glass_modifier} remove_character_modifier = lunatic_made_of_glass_modifier}
+	if = {limit = {has_character_modifier = lunatic_bat_ravings_modifier} remove_character_modifier = lunatic_bat_ravings_modifier}
+	if = {limit = {has_character_modifier = confused_modifier} remove_character_modifier = confused_modifier}
+
+	#Health Modifiers - Treatment
+	if = {limit = {has_character_modifier = safe_disease_treatment_failure_modifier} remove_character_modifier = safe_disease_treatment_failure_modifier}
+	if = {limit = {has_character_modifier = risky_disease_treatment_failure_modifier} remove_character_modifier = risky_disease_treatment_failure_modifier}
+	if = {limit = {has_character_modifier = safe_wound_treatment_failure_modifier} remove_character_modifier = safe_wound_treatment_failure_modifier}
+	if = {limit = {has_character_modifier = risky_wound_treatment_failure_modifier} remove_character_modifier = risky_wound_treatment_failure_modifier}
+	if = {limit = {has_character_modifier = botched_fertility_treatment} remove_character_modifier = botched_fertility_treatment}
+
+	#Health Modifiers - Weight
+	if = {limit = {has_character_modifier = gaining_weight_modifier} remove_character_modifier = gaining_weight_modifier}
+	if = {limit = {has_character_modifier = losing_weight_modifier} remove_character_modifier = losing_weight_modifier}
+	if = {limit = {has_character_modifier = obese_modifier} remove_character_modifier = obese_modifier}
+	if = {limit = {has_character_modifier = malnourished_modifier} remove_character_modifier = malnourished_modifier}
+
+	#Lifestyle modifiers affecting health
+	if = {limit = {has_character_modifier = intrigue_starved_and_deprived_modifier} remove_character_modifier = intrigue_starved_and_deprived_modifier}
+	if = {limit = {has_character_modifier = intrigue_suffered_degredation_modifier} remove_character_modifier = intrigue_suffered_degredation_modifier}
+	if = {limit = {has_character_modifier = intrigue_broken_modifier} remove_character_modifier = intrigue_broken_modifier}
+	if = {limit = {has_character_modifier = chronic_headaches_modifier} remove_character_modifier = chronic_headaches_modifier}
+	if = {limit = {has_character_modifier = theology_dangerous_habits_modifier} remove_character_modifier = theology_dangerous_habits_modifier}
+	if = {limit = {has_character_modifier = hallucinogenic_visions_terrifying_modifier} remove_character_modifier = hallucinogenic_visions_terrifying_modifier}
+	if = {limit = {has_character_modifier = cursed_horse_modifier} remove_character_modifier = cursed_horse_modifier}
+
+	#Basic and Stress Modifiers affecting health
+	if = {limit = {has_character_modifier = stress_level_1} remove_character_modifier = stress_level_1}
+	if = {limit = {has_character_modifier = stress_level_2} remove_character_modifier = stress_level_2}
+	if = {limit = {has_character_modifier = stress_level_3} remove_character_modifier = stress_level_3}
+	if = {limit = {has_character_modifier = stress_frozen_grief} remove_character_modifier = stress_frozen_grief}
+	if = {limit = {has_character_modifier = stress_drinking_binge} remove_character_modifier = stress_drinking_binge}
+	if = {limit = {has_character_modifier = stress_inappetetic_hunger_1} remove_character_modifier = stress_inappetetic_hunger_1}
+	if = {limit = {has_character_modifier = stress_inappetetic_hunger_2} remove_character_modifier = stress_inappetetic_hunger_2}
+	if = {limit = {has_character_modifier = stress_inappetetic_hunger_3} remove_character_modifier = stress_inappetetic_hunger_3}
+
+	#Other modifiers affecting health
+	if = {limit = {has_character_modifier = feast_bad_reaction_to_food} remove_character_modifier = feast_bad_reaction_to_food}
+	if = {limit = {has_character_modifier = feast_bad_form_with_rival_modifier} remove_character_modifier = feast_bad_form_with_rival_modifier}
+	if = {limit = {has_character_modifier = hunt_tasted_the_belt_modifier} remove_character_modifier = hunt_tasted_the_belt_modifier}
+	#if = {limit = {has_character_modifier = pilgrimage_completely_lost_modifier} remove_character_modifier = pilgrimage_completely_lost_modifier}
+	if = {limit = {has_character_modifier = sleep_deprived_modifier} remove_character_modifier = sleep_deprived_modifier}
+	if = {limit = {has_character_modifier = court_starved_modifier} remove_character_modifier = court_starved_modifier}
+	if = {limit = {has_character_modifier = recently_tortured} remove_character_modifier = recently_tortured}
+	if = {limit = {has_character_modifier = recently_blinded} remove_character_modifier = recently_blinded}
+	if = {limit = {has_character_modifier = recently_castrated} remove_character_modifier = recently_castrated}
+	if = {limit = {has_character_modifier = bad_omen_modifier} remove_character_modifier = bad_omen_modifier}
+	if = {limit = {has_character_modifier = poisonous_gold_modifier} remove_character_modifier = poisonous_gold_modifier}
+	if = {limit = {has_character_modifier = venomous_animal_modifier} remove_character_modifier = venomous_animal_modifier}
+	if = {limit = {has_character_modifier = cat_story_allergy_modifier} remove_character_modifier = cat_story_allergy_modifier}
+	if = {limit = {has_character_modifier = drafty_dining_hall_modifier} remove_character_modifier = drafty_dining_hall_modifier}
+	if = {limit = {has_character_modifier = designated_human_sacrifice_modifier} remove_character_modifier = designated_human_sacrifice_modifier}
+	if = {limit = {has_character_modifier = all_work_no_play_persian_modifier} remove_character_modifier = all_work_no_play_persian_modifier}
+	if = {limit = {has_character_modifier = stress_starvation} remove_character_modifier = stress_starvation}
+	if = {limit = {has_character_modifier = stress_starvation_minor} remove_character_modifier = stress_starvation_minor}
+	if = {limit = {has_character_modifier = failing_health} remove_character_modifier = failing_health}
+
+	#Stress modifiers - health_negative and stress_negative
+	if = {limit = {has_character_modifier = high_blood_pressure_modifier} remove_character_modifier = high_blood_pressure_modifier}
+	if = {limit = {has_character_modifier = stress_stuffed_corpse} remove_character_modifier = stress_stuffed_corpse}
+	if = {limit = {has_character_modifier = stress_managed_grief} remove_character_modifier = stress_managed_grief}
+	if = {limit = {has_character_modifier = stress_hashish_stupor} remove_character_modifier = stress_hashish_stupor}
+	if = {limit = {has_character_modifier = angry_at_everyone_modifier} remove_character_modifier = angry_at_everyone_modifier}
+	if = {limit = {has_character_modifier = irritating_everyone_modifier} remove_character_modifier = irritating_everyone_modifier}
+	if = {limit = {has_character_modifier = irritating_everyone_courtier_modifier} remove_character_modifier = irritating_everyone_courtier_modifier}
+	if = {limit = {has_character_modifier = lost_in_lust_modifier} remove_character_modifier = lost_in_lust_modifier}
+	if = {limit = {has_character_modifier = agonising_irritations_modifier} remove_character_modifier = agonising_irritations_modifier}
+	if = {limit = {has_character_modifier = scars_over_scars_modifier} remove_character_modifier = scars_over_scars_modifier}
+	if = {limit = {has_character_modifier = trying_to_buy_happiness_modifier} remove_character_modifier = trying_to_buy_happiness_modifier}
+	if = {limit = {has_character_modifier = outer_monologue_modifier} remove_character_modifier = outer_monologue_modifier}
+	if = {limit = {has_character_modifier = sated_by_mistakes_modifier} remove_character_modifier = sated_by_mistakes_modifier}
+	if = {limit = {has_character_modifier = refuge_in_words_modifier} remove_character_modifier = refuge_in_words_modifier}
+	if = {limit = {has_character_modifier = sorely_needed_confidant_modifier} remove_character_modifier = sorely_needed_confidant_modifier}
+	if = {limit = {has_character_modifier = long_walks_of_the_mind_modifier} remove_character_modifier = long_walks_of_the_mind_modifier}
+	if = {limit = {has_character_modifier = bottom_of_a_bottle_modifier} remove_character_modifier = bottom_of_a_bottle_modifier}
+	if = {limit = {has_character_modifier = fogging_hard_memories_modifier} remove_character_modifier = fogging_hard_memories_modifier}
+
+	#Stress modifiers - Other
+	if = {limit = {has_character_modifier = lashing_out_at_victims_modifier} remove_character_modifier = lashing_out_at_victims_modifier}
+	if = {limit = {has_character_modifier = grouchy_ruler_modifier} remove_character_modifier = grouchy_ruler_modifier}
+	if = {limit = {has_character_modifier = obsessed_autobiographer_modifier} remove_character_modifier = obsessed_autobiographer_modifier}
+	if = {limit = {has_character_modifier = scopophobic_modifier} remove_character_modifier = scopophobic_modifier}
+	if = {limit = {has_character_modifier = running_from_responsibilities_modifier} remove_character_modifier = running_from_responsibilities_modifier}
+	if = {limit = {has_character_modifier = tragic_drunk_modifier} remove_character_modifier = tragic_drunk_modifier}
+	if = {limit = {has_character_modifier = tragic_stoner_modifier} remove_character_modifier = tragic_stoner_modifier}
+
+	#VIET Events
+	#if = {limit = {has_character_modifier = VIET_scorpion_sting} remove_character_modifier = VIET_scorpion_sting}
+	#if = {limit = {has_character_modifier = VIET_has_fruit_loops_poops} remove_character_modifier = VIET_has_fruit_loops_poops}
+	#if = {limit = {has_character_modifier = VIET_late_night_work} remove_character_modifier = VIET_late_night_work}
+	#if = {limit = {has_character_modifier = VIET_noontime_sun_headache} remove_character_modifier = VIET_noontime_sun_headache}
+	#if = {limit = {has_character_modifier = VIET_world_war_1_dream} remove_character_modifier = VIET_world_war_1_dream}
+	#if = {limit = {has_character_modifier = VIET_torch_burn} remove_character_modifier = VIET_torch_burn}
+	#if = {limit = {has_character_modifier = VIET_tiring_travel} remove_character_modifier = VIET_tiring_travel}
+	#if = {limit = {has_character_modifier = VIET_stared_at_sun} remove_character_modifier = VIET_stared_at_sun}
+	#if = {limit = {has_character_modifier = VIET_permanent_sun_damage} remove_character_modifier = VIET_permanent_sun_damage}
+	#if = {limit = {has_character_modifier = VIET_numerology_prediction_bad} remove_character_modifier = VIET_numerology_prediction_bad}
+	#if = {limit = {has_character_modifier = VIET_haunted_by_ghost_for_sin} remove_character_modifier = VIET_haunted_by_ghost_for_sin}
+	#if = {limit = {has_character_modifier = VIET_bad_acne} remove_character_modifier = VIET_bad_acne}
+
+	#Princes of Darkness and Ancient Magic
+	#if = {limit = {has_character_modifier = slightbloodloss_modifier} remove_character_modifier = slightbloodloss_modifier}
+	#if = {limit = {has_character_modifier = smallbloodloss_modifier} remove_character_modifier = smallbloodloss_modifier}
+	#if = {limit = {has_character_modifier = majorbloodloss_modifier} remove_character_modifier = majorbloodloss_modifier}
+	#if = {limit = {has_character_modifier = drained_modifier} remove_character_modifier = drained_modifier}
+
+	#Pregnancy Complication Flags
+	if = {limit = {has_character_flag = birth_mother_will_die} remove_character_flag = birth_mother_will_die}
+	if = {limit = {has_character_flag = birth_mother_will_become_ill} remove_character_flag = birth_mother_will_become_ill}
+	if = {limit = {has_character_flag = birth_child_will_become_sickly} remove_character_flag = birth_child_will_become_sickly}
+	if = {
+		limit = {
+			is_pregnant = yes
+			NOT = {has_character_flag = birth_will_go_smoothly}
+		}
+		add_character_flag = birth_will_go_smoothly
+	}
+
+	#Know Thyself
+	if = {limit = {has_character_flag = know_thyself_perk_delay_period} remove_character_flag = know_thyself_perk_delay_period}
+	if = {limit = {has_character_flag = know_thyself_has_triggered_delay} remove_character_flag = know_thyself_has_triggered_delay}
+
+	#Disease Immunity
+	if = {limit = {NOT = {has_character_flag = immune_to_disease}} add_character_flag = {flag = immune_to_disease}}
+
+	#Weight
+	set_variable = {name = character_weight_variable value = 0}
+
+	####Stress####
+	if = {
+		limit = {
+			stress > 200
+		}
+		add_stress = -200
+	}
+	if = {
+		limit = {
+			stress > 100
+		}
+		add_stress = -100
+	}
+	if = {
+		limit = {
+			stress > 50
+		}
+		add_stress = -50
+	}
+	if = {
+		limit = {
+			stress > 25
+		}
+		add_stress = -25
+	}
+
+	####Weight####
+	if = {
+		limit = {
+			target_weight >= 15
+		}
+		change_target_weight = -25
+	}
+	if = {
+		limit = {
+			target_weight <= -20
+		}
+		change_target_weight = 25
+	}
+	if = {
+		limit = {
+			current_weight >= 15
+		}
+		change_current_weight = -25
+	}
+	if = {
+		limit = {
+			current_weight <= -20
+		}
+		change_current_weight = 25
+	}
+	####
+	if = {
+		limit = {
+			target_weight >= 15
+		}
+		change_target_weight = -25
+	}
+	if = {
+		limit = {
+			target_weight <= -20
+		}
+		change_target_weight = 25
+	}
+	if = {
+		limit = {
+			current_weight >= 15
+		}
+		change_current_weight = -25
+	}
+	if = {
+		limit = {
+			current_weight <= -20
+		}
+		change_current_weight = 25
+	}
+	####
+	if = {
+		limit = {
+			target_weight >= 15
+		}
+		change_target_weight = -25
+	}
+	if = {
+		limit = {
+			target_weight <= -20
+		}
+		change_target_weight = 25
+	}
+	if = {
+		limit = {
+			current_weight >= 15
+		}
+		change_current_weight = -25
+	}
+	if = {
+		limit = {
+			current_weight <= -20
+		}
+		change_current_weight = 25
+	}
+	####
+	if = {
+		limit = {
+			target_weight >= 15
+		}
+		change_target_weight = -25
+	}
+	if = {
+		limit = {
+			target_weight <= -20
+		}
+		change_target_weight = 25
+	}
+	if = {
+		limit = {
+			current_weight >= 15
+		}
+		change_current_weight = -25
+	}
+	if = {
+		limit = {
+			current_weight <= -20
+		}
+		change_current_weight = 25
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_restorebodyandmind_extended_effect = {
+	#Self-destructive behaviors
+	if = {limit = {has_trait = drunkard} remove_trait = drunkard}
+	if = {limit = {has_trait = flagellant} remove_trait = flagellant}
+	if = {limit = {has_trait = hashishiyah} remove_trait = hashishiyah}
+	if = {limit = {has_trait = improvident} remove_trait = improvident}
+	if = {limit = {has_trait = inappetetic} remove_trait = inappetetic}
+	if = {limit = {has_trait = irritable} remove_trait = irritable}
+	if = {limit = {has_trait = profligate} remove_trait = profligate}
+	if = {limit = {has_trait = rakish} remove_trait = rakish}
+
+	#The Most evil personality traits
+	if = {limit = {has_trait = sadistic} remove_trait = sadistic}        #compassionate
+	if = {limit = {has_trait = callous} remove_trait = callous}          #compassionate
+	if = {limit = {has_trait = vengeful} remove_trait = vengeful}        #forgiving
+	if = {limit = {has_trait = deceitful} remove_trait = deceitful}      #honest (truthful)
+	if = {limit = {has_trait = wrathful} remove_trait = wrathful}        #calm
+	#if = {limit = {has_trait = greedy} remove_trait = greedy}           #generous
+	#if = {limit = {has_trait = lustful} remove_trait = lustful}         #chaste
+	#if = {limit = {has_trait = arrogant} remove_trait = arrogant}       #humble
+	#if = {limit = {has_trait = lazy} remove_trait = lazy}               #diligent
+	#if = {limit = {has_trait = impatient} remove_trait = impatient}     #patient
+	#if = {limit = {has_trait = ambitious} remove_trait = ambitious}     #content
+	#if = {limit = {has_trait = arbitrary} remove_trait = arbitrary}     #just
+	#if = {limit = {has_trait = craven} remove_trait = craven}           #brave
+	#if = {limit = {has_trait = gluttonous} remove_trait = gluttonous}   #temperate
+	#if = {limit = {has_trait = paranoid} remove_trait = paranoid}       #trusting
+	#if = {limit = {has_trait = stubborn} remove_trait = stubborn}       #fickle
+	#if = {limit = {has_trait = cynical} remove_trait = cynical}         #zealous
+	#if = {limit = {has_trait = shy} remove_trait = shy}                 #gregarious
+
+	#Congenital problems
+	if = {limit = {has_trait = albino} remove_trait = albino}
+	if = {limit = {has_trait = lisping} remove_trait = lisping}
+	if = {limit = {has_trait = stuttering} remove_trait = stuttering}
+	if = {limit = {has_trait = giant} remove_trait = giant}
+	if = {limit = {has_trait = scaly} remove_trait = scaly}
+	if = {limit = {has_trait = clubfooted} remove_trait = clubfooted}
+	if = {limit = {has_trait = dwarf} remove_trait = dwarf}
+	if = {limit = {has_trait = hunchbacked} remove_trait = hunchbacked}
+	if = {limit = {has_trait = infertile} remove_trait = infertile}
+	if = {limit = {has_trait = wheezing} remove_trait = wheezing}
+	if = {limit = {has_trait = spindly} remove_trait = spindly}
+	if = {limit = {has_trait = bleeder} remove_trait = bleeder}
+	if = {limit = {has_trait = inbred} remove_trait = inbred}
+
+	#Add pure-blood if perfect physique, intellect, beauty
+	if = {
+		limit = {
+			has_trait = physique_good_3
+			has_trait = intellect_good_3
+			has_trait = beauty_good_3
+		}
+		if = {
+			limit = {
+				NOT = {has_trait = pure_blooded}
+			}
+			add_trait = pure_blooded
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+add_immortality_supplement = {
+	if = {limit = {has_character_flag = know_thyself_perk_delay_period} remove_character_flag = know_thyself_perk_delay_period}
+	if = {limit = {has_character_flag = know_thyself_has_triggered_delay} remove_character_flag = know_thyself_has_triggered_delay}
+	if = {limit = {NOT = {has_character_flag = immune_to_disease}} add_character_flag = {flag = immune_to_disease}}
+
+	set_variable = {
+		name = immortal_age
+		value = age
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+change_immortality_supplement = {
+	if = {limit = {has_character_flag = know_thyself_perk_delay_period} remove_character_flag = know_thyself_perk_delay_period}
+	if = {limit = {has_character_flag = know_thyself_has_triggered_delay} remove_character_flag = know_thyself_has_triggered_delay}
+	if = {limit = {NOT = {has_character_flag = immune_to_disease}} add_character_flag = {flag = immune_to_disease}}
+
+	if = {
+		limit = {
+			has_trait = immortality_sterile
+		}
+		if = {limit = {has_trait = immortality_sterile} remove_trait = immortality_sterile}
+	}
+	if = {
+		limit = {
+			has_trait = immortality_genetic
+		}
+		if = {limit = {has_trait = immortality_genetic} remove_trait = immortality_genetic}
+	}
+	if = {
+		limit = {
+			has_trait = immortal
+		}
+		if = {limit = {has_trait = immortal} remove_trait = immortal}
+	}
+	if = {
+		limit = {
+			has_trait = ageless
+		}
+		if = {limit = {has_trait = ageless} remove_trait = ageless}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+change_immortality_genetic_supplement = {
+	if = {limit = {has_character_flag = know_thyself_perk_delay_period} remove_character_flag = know_thyself_perk_delay_period}
+	if = {limit = {has_character_flag = know_thyself_has_triggered_delay} remove_character_flag = know_thyself_has_triggered_delay}
+	if = {limit = {NOT = {has_character_flag = immune_to_disease}} add_character_flag = {flag = immune_to_disease}}
+
+	if = {
+		limit = {
+			has_trait = immortality_sterile
+		}
+		if = {limit = {has_trait = immortality_sterile} remove_trait = immortality_sterile}
+	}
+	if = {
+		limit = {
+			has_trait = immortality
+		}
+		if = {limit = {has_trait = immortality} remove_trait = immortality}
+	}
+	if = {
+		limit = {
+			has_trait = immortal
+		}
+		if = {limit = {has_trait = immortal} remove_trait = immortal}
+	}
+	if = {
+		limit = {
+			has_trait = ageless
+		}
+		if = {limit = {has_trait = ageless} remove_trait = ageless}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+change_immortality_sterile_supplement = {
+	if = {limit = {has_character_flag = know_thyself_perk_delay_period} remove_character_flag = know_thyself_perk_delay_period}
+	if = {limit = {has_character_flag = know_thyself_has_triggered_delay} remove_character_flag = know_thyself_has_triggered_delay}
+	if = {limit = {NOT = {has_character_flag = immune_to_disease}} add_character_flag = {flag = immune_to_disease}}
+
+	if = {
+		limit = {
+			has_trait = immortality
+		}
+		if = {limit = {has_trait = immortality} remove_trait = immortality}
+	}
+	if = {
+		limit = {
+			has_trait = immortality_genetic
+		}
+		if = {limit = {has_trait = immortality_genetic} remove_trait = immortality_genetic}
+	}
+	if = {
+		limit = {
+			has_trait = immortal
+		}
+		if = {limit = {has_trait = immortal} remove_trait = immortal}
+	}
+	if = {
+		limit = {
+			has_trait = ageless
+		}
+		if = {limit = {has_trait = ageless} remove_trait = ageless}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+remove_immortality = {
+	if = {
+		limit = {
+			has_trait = immortality_sterile
+		}
+		if = {limit = {has_trait = immortality_sterile} remove_trait = immortality_sterile}
+	}
+	if = {
+		limit = {
+			has_trait = immortality
+		}
+		if = {limit = {has_trait = immortality} remove_trait = immortality}
+	}
+	if = {
+		limit = {
+			has_trait = immortality_genetic
+		}
+		if = {limit = {has_trait = immortality_genetic} remove_trait = immortality_genetic}
+	}
+	if = {
+		limit = {
+			has_trait = immortal
+		}
+		if = {limit = {has_trait = immortal} remove_trait = immortal}
+	}
+	if = {
+		limit = {
+			has_trait = ageless
+		}
+		if = {limit = {has_trait = ageless} remove_trait = ageless}
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_to_disease
+		}
+		remove_character_flag = immune_to_disease
+	}
+	remove_variable = immortal_age
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=

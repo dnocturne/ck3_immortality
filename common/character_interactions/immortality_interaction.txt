@@ -1,0 +1,646 @@
+﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+grant_immortality_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = no
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = immortality_add.1
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+immortality_disease_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+			NOT = {has_character_flag = immune_to_disease}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = immune_to_disease
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+change_immortality_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = immortality_add.1
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+remove_immortality_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_immortality = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+	#custom_tooltip = restore_body_interaction_tooltip
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			#code is at common\scripted_effects\immortality_scripted_effect_restorebodyandmind.txt
+			immortality_restorebodyandmind_effect = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_auto_on_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+	#custom_tooltip = restore_body_interaction_tooltip
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+			NOT = {has_character_flag = restore_body_auto}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = restore_body_auto
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+restore_body_auto_off_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+	#custom_tooltip = restore_body_interaction_tooltip
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+			has_character_flag = restore_body_auto
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_flag = restore_body_auto
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = immortality_set_age.1
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_precise_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						exists = var:immortal_age
+					}
+				}
+				set_immortal_age = 20
+				set_variable = {
+					name = immortal_age
+					value = 20
+				}
+			}
+		}
+
+		scope:actor = {
+			trigger_event = immortality_set_age.3
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+lifetime_lock_removal_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+	#custom_tooltip = lifetime_lock_removal_interaction_tooltip
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	is_valid = {
+		scope:recipient = {
+			is_lifetime_lock_removal_needed = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = immortality_lifetime_lock_removal.1
+		}
+	}
+}
+
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_grant_immortality_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality
+			add_immortality_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_grant_immortality_genetic_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality_genetic
+			add_immortality_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_grant_immortality_sterile_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality_sterile
+			add_immortality_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_change_immortality_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+			NOT = {has_trait = immortality}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality
+			change_immortality_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_change_immortality_genetic_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+			NOT = {has_trait = immortality_genetic}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality_genetic
+			change_immortality_genetic_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+quick_change_immortality_sterile_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_core = yes
+			NOT = {has_trait = immortality_sterile}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality_sterile
+			change_immortality_sterile_supplement = yes
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_16_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = immortal_age
+				value = 16
+			}
+			set_immortal_age = 16
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_20_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = immortal_age
+				value = 20
+			}
+			set_immortal_age = 20
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_30_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = immortal_age
+				value = 30
+			}
+			set_immortal_age = 30
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_50_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = immortal_age
+				value = 50
+			}
+			set_immortal_age = 50
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_age_90_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_variable = {
+				name = immortal_age
+				value = 90
+			}
+			set_immortal_age = 90
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_other_age_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = immortality_set_age.1
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+set_other_age_precise_interaction = {
+	category = interaction_category_uncategorized
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	ai_will_do = 0
+
+	is_shown = {
+		NOT = {has_global_variable = immortality_hide}
+		scope:recipient = {
+			#code is at common\scripted_triggers\immortality_scripted_trigger_is_immortal.txt
+			is_immortal_extended = yes
+		}
+	}
+
+	on_send = {
+		scope:recipient = {
+			save_scope_as = scope_set_age
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						exists = var:immortal_age
+					}
+				}
+				set_immortal_age = 20
+				set_variable = {
+					name = immortal_age
+					value = 20
+				}
+			}
+		}
+
+		scope:actor = {
+			trigger_event = immortality_set_age.3
+		}
+	}
+}
+#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=

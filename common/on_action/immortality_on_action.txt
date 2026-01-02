@@ -1,0 +1,12 @@
+﻿on_birthday = {
+	#on_actions = {
+	#	on_specific_birthday
+	#	on_birthday_childhood
+	#	on_graceful_aging_birthday
+	#}
+	events = {
+		immortality_genetic_AgeTo20.1
+		immortality_AutoRestoreBodyAndMind.1
+		immortality_AutoRestoreBodyAndMind.2
+	}
+}
