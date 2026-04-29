@@ -136,26 +136,6 @@ immortality_restorebodyandmind_effect = {
 	if = {limit = {has_character_modifier = tragic_drunk_modifier} remove_character_modifier = tragic_drunk_modifier}
 	if = {limit = {has_character_modifier = tragic_stoner_modifier} remove_character_modifier = tragic_stoner_modifier}
 
-	#VIET Events
-	#if = {limit = {has_character_modifier = VIET_scorpion_sting} remove_character_modifier = VIET_scorpion_sting}
-	#if = {limit = {has_character_modifier = VIET_has_fruit_loops_poops} remove_character_modifier = VIET_has_fruit_loops_poops}
-	#if = {limit = {has_character_modifier = VIET_late_night_work} remove_character_modifier = VIET_late_night_work}
-	#if = {limit = {has_character_modifier = VIET_noontime_sun_headache} remove_character_modifier = VIET_noontime_sun_headache}
-	#if = {limit = {has_character_modifier = VIET_world_war_1_dream} remove_character_modifier = VIET_world_war_1_dream}
-	#if = {limit = {has_character_modifier = VIET_torch_burn} remove_character_modifier = VIET_torch_burn}
-	#if = {limit = {has_character_modifier = VIET_tiring_travel} remove_character_modifier = VIET_tiring_travel}
-	#if = {limit = {has_character_modifier = VIET_stared_at_sun} remove_character_modifier = VIET_stared_at_sun}
-	#if = {limit = {has_character_modifier = VIET_permanent_sun_damage} remove_character_modifier = VIET_permanent_sun_damage}
-	#if = {limit = {has_character_modifier = VIET_numerology_prediction_bad} remove_character_modifier = VIET_numerology_prediction_bad}
-	#if = {limit = {has_character_modifier = VIET_haunted_by_ghost_for_sin} remove_character_modifier = VIET_haunted_by_ghost_for_sin}
-	#if = {limit = {has_character_modifier = VIET_bad_acne} remove_character_modifier = VIET_bad_acne}
-
-	#Princes of Darkness and Ancient Magic
-	#if = {limit = {has_character_modifier = slightbloodloss_modifier} remove_character_modifier = slightbloodloss_modifier}
-	#if = {limit = {has_character_modifier = smallbloodloss_modifier} remove_character_modifier = smallbloodloss_modifier}
-	#if = {limit = {has_character_modifier = majorbloodloss_modifier} remove_character_modifier = majorbloodloss_modifier}
-	#if = {limit = {has_character_modifier = drained_modifier} remove_character_modifier = drained_modifier}
-
 	#Pregnancy Complication Flags
 	if = {limit = {has_character_flag = birth_mother_will_die} remove_character_flag = birth_mother_will_die}
 	if = {limit = {has_character_flag = birth_mother_will_become_ill} remove_character_flag = birth_mother_will_become_ill}
