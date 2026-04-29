@@ -43,7 +43,7 @@ is_lifetime_lock_removal_needed = {
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 is_lifetime_vassal_lock_removal_needed = {
 	OR = {
-		#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occuring with vassal_contract_is_blocked_from_modification
+		#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occurring with subject_contract_is_blocked_from_modification
 
 		#Self - for upstream feudal contract with liege, if present
 		trigger_if = {
@@ -52,7 +52,7 @@ is_lifetime_vassal_lock_removal_needed = {
 				is_ruler = yes
 				vassal_contract_has_modifiable_obligations = yes
 			}
-			vassal_contract_is_blocked_from_modification = yes
+			subject_contract_is_blocked_from_modification = yes
 		}
 
 		#Vassals - Downstream
@@ -64,7 +64,7 @@ is_lifetime_vassal_lock_removal_needed = {
 					vassal_contract_has_modifiable_obligations = yes
 				}
 			}
-			vassal_contract_is_blocked_from_modification = yes
+			subject_contract_is_blocked_from_modification = yes
 		}
 	}
 }

@@ -1,6 +1,6 @@
 version="1.0"
 tags={
-	"1.18 'Crane'"
+	"1.19 'Scribe'"
 }
-name="Immortality (dnocturne)"
-supported_version="1.18.2"
+name="Immortality"
+supported_version="1.19.*"

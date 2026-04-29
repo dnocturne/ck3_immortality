@@ -5,7 +5,7 @@ grant_immortality_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -34,7 +34,7 @@ immortality_disease_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -58,7 +58,7 @@ change_immortality_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -87,7 +87,7 @@ remove_immortality_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -110,7 +110,7 @@ restore_body_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 	#custom_tooltip = restore_body_interaction_tooltip
 
 	is_shown = {
@@ -135,7 +135,7 @@ restore_body_auto_on_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 	#custom_tooltip = restore_body_interaction_tooltip
 
 	is_shown = {
@@ -160,7 +160,7 @@ restore_body_auto_off_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 	#custom_tooltip = restore_body_interaction_tooltip
 
 	is_shown = {
@@ -185,7 +185,7 @@ set_age_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -214,7 +214,7 @@ set_age_precise_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -258,7 +258,7 @@ lifetime_lock_removal_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 	#custom_tooltip = lifetime_lock_removal_interaction_tooltip
 
 	is_shown = {
@@ -295,7 +295,7 @@ quick_grant_immortality_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -319,7 +319,7 @@ quick_grant_immortality_genetic_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -343,7 +343,7 @@ quick_grant_immortality_sterile_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -367,7 +367,7 @@ quick_change_immortality_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -392,7 +392,7 @@ quick_change_immortality_genetic_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -417,7 +417,7 @@ quick_change_immortality_sterile_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -442,7 +442,7 @@ set_age_16_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -469,7 +469,7 @@ set_age_20_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -496,7 +496,7 @@ set_age_30_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -523,7 +523,7 @@ set_age_50_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -550,7 +550,7 @@ set_age_90_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -577,7 +577,7 @@ set_other_age_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}
@@ -606,7 +606,7 @@ set_other_age_precise_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
-	ai_will_do = 0
+	ai_will_do = { base = 0 }
 
 	is_shown = {
 		NOT = {has_global_variable = immortality_hide}

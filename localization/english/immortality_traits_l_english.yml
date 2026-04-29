@@ -24,11 +24,8 @@
  trait_immortality_genetic_character_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has escaped the confines of aging. Can have, and pass his immortality to his children."
 
  immortal:0 "Immortal"
- trait_immortal:0 "Immortal"
- trait_immortal_desc:0 "This character has escaped the confines of aging."
  trait_immortal_1:0 "Immortal"
  trait_immortal_1_desc:0 "This character has escaped the confines of aging."
- trait_immortal_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has escaped the confines of aging."
  trait_immortal_character_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has escaped the confines of aging."
 
  ageless:0 "Ageless"

@@ -1,6 +1,5 @@
 ﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality = {
-	index = 286
 	immortal = yes
 	no_prowess_loss_from_age = yes
 
@@ -10,8 +9,6 @@ immortality = {
 	physical = yes
 
 	inherit_chance = 0
-	birth = 0
-	random_creation = 0
 
 	valid_sex = all
 	parent_inheritance_sex = all
@@ -45,7 +42,6 @@ immortality = {
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality_sterile = {
-	index = 287
 	immortal = yes
 	no_prowess_loss_from_age = yes
 
@@ -55,8 +51,6 @@ immortality_sterile = {
 	physical = yes
 
 	inherit_chance = 0
-	birth = 0
-	random_creation = 0
 
 	valid_sex = all
 	parent_inheritance_sex = all
@@ -90,7 +84,6 @@ immortality_sterile = {
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality_genetic = {
-	index = 288
 	immortal = yes
 	no_prowess_loss_from_age = yes
 
@@ -100,8 +93,6 @@ immortality_genetic = {
 	physical = yes
 
 	inherit_chance = 100
-	birth = 0
-	random_creation = 0
 
 	valid_sex = all
 	parent_inheritance_sex = all
@@ -135,7 +126,6 @@ immortality_genetic = {
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortal = {
-	index = 285
 	immortal = yes
 	no_prowess_loss_from_age = yes
 
@@ -145,8 +135,6 @@ immortal = {
 	physical = yes
 
 	inherit_chance = 0
-	birth = 0
-	random_creation = 0
 
 	valid_sex = all
 	parent_inheritance_sex = all
@@ -180,7 +168,6 @@ immortal = {
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 ageless = {
-	index = 284
 	immortal = yes
 	no_prowess_loss_from_age = yes
 
@@ -190,8 +177,6 @@ ageless = {
 	physical = yes
 
 	inherit_chance = 0
-	birth = 0
-	random_creation = 0
 
 	valid_sex = all
 	parent_inheritance_sex = all

@@ -604,9 +604,7 @@ immortality_lifetime_lock_removal.1 = {
 		name = immortality_lifetime_lock_removal.1.option.w1
 		trigger = {
 			scope:scope_set_age = {
-				OR = {
-					has_character_flag = used_lifetime_invasion
-				}
+				has_character_flag = used_lifetime_invasion
 			}
 		}
 
@@ -621,9 +619,7 @@ immortality_lifetime_lock_removal.1 = {
 		name = immortality_lifetime_lock_removal.1.option.w2
 		trigger = {
 			scope:scope_set_age = {
-				OR = {
-					has_character_flag = used_lifetime_subjugation
-				}
+				has_character_flag = used_lifetime_subjugation
 			}
 		}
 
@@ -638,9 +634,7 @@ immortality_lifetime_lock_removal.1 = {
 		name = immortality_lifetime_lock_removal.1.option.w3
 		trigger = {
 			scope:scope_set_age = {
-				OR = {
-					has_character_flag = declared_major_religious_war_flag
-				}
+				has_character_flag = declared_major_religious_war_flag
 			}
 		}
 
@@ -725,7 +719,7 @@ immortality_lifetime_lock_removal.1 = {
 		}
 
 		scope:scope_set_age = {
-			#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occuring with vassal_contract_is_blocked_from_modification
+			#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occurring with subject_contract_is_blocked_from_modification
 
 			#Self - for upstream feudal contract with liege, if present
 			if = {
@@ -736,9 +730,9 @@ immortality_lifetime_lock_removal.1 = {
 				}
 				if = {
 					limit = {
-						vassal_contract_is_blocked_from_modification = yes
+						subject_contract_is_blocked_from_modification = yes
 					}
-					set_vassal_contract_modification_blocked = no
+					set_subject_contract_modification_blocked = no
 				}
 			}
 
@@ -746,7 +740,7 @@ immortality_lifetime_lock_removal.1 = {
 			every_vassal = {
 				limit = {
 					vassal_contract_has_modifiable_obligations = yes
-					vassal_contract_is_blocked_from_modification = yes
+					subject_contract_is_blocked_from_modification = yes
 				}
 				if = {
 					limit = {
@@ -754,7 +748,7 @@ immortality_lifetime_lock_removal.1 = {
 						is_ruler = yes
 						vassal_contract_has_modifiable_obligations = yes
 					}
-					set_vassal_contract_modification_blocked = no
+					set_subject_contract_modification_blocked = no
 				}
 			}
 		}
@@ -783,10 +777,6 @@ immortality_genetic_AgeTo20.1 = {
 	}
 
 	immediate = {
-		set_variable = {
-			name = test_age
-			value = age
-		}
 		##Add disease immunity flag if not present
 		if = {
 			limit = {
@@ -840,25 +830,6 @@ immortality_AutoRestoreBodyAndMind.1 = {
 
 	immediate = {
 		immortality_restorebodyandmind_effect = yes
-	}
-}
-
-#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
-
-#Fires on character birthday
-immortality_AutoRestoreBodyAndMind.2 = {
-	type = character_event
-	hidden = yes
-
-	#Only for those with immortality_genetic that do not have a age-set variable
-	#Scenario exists when born with the trait or when the trait is added via ruler designer
-	trigger = {
-		is_immortal = yes
-		has_character_flag = restore_body_extended_auto
-	}
-
-	immediate = {
-		immortality_restorebodyandmind_extended_effect = yes
 	}
 }
 

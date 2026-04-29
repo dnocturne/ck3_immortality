@@ -16,7 +16,8 @@ immortality_restorebodyandmind_effect = {
 	if = {limit = {has_trait = infirm} remove_trait = infirm}
 	if = {limit = {has_trait = incapable} remove_trait = incapable}
 	if = {limit = {has_trait = scarred} remove_trait = scarred}
-	if = {limit = {has_trait = eunuch} remove_trait = eunuch}
+	if = {limit = {has_trait = eunuch_1} remove_trait = eunuch_1}
+	if = {limit = {has_trait = beardless_eunuch} remove_trait = beardless_eunuch}
 
 	#Diseases
 	if = {limit = {has_trait = gout_ridden} remove_trait = gout_ridden}
@@ -95,7 +96,6 @@ immortality_restorebodyandmind_effect = {
 	if = {limit = {has_character_modifier = court_starved_modifier} remove_character_modifier = court_starved_modifier}
 	if = {limit = {has_character_modifier = recently_tortured} remove_character_modifier = recently_tortured}
 	if = {limit = {has_character_modifier = recently_blinded} remove_character_modifier = recently_blinded}
-	if = {limit = {has_character_modifier = recently_castrated} remove_character_modifier = recently_castrated}
 	if = {limit = {has_character_modifier = bad_omen_modifier} remove_character_modifier = bad_omen_modifier}
 	if = {limit = {has_character_modifier = poisonous_gold_modifier} remove_character_modifier = poisonous_gold_modifier}
 	if = {limit = {has_character_modifier = venomous_animal_modifier} remove_character_modifier = venomous_animal_modifier}
