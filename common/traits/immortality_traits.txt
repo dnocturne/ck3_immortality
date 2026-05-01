@@ -1,6 +1,7 @@
 ﻿#*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality = {
 	immortal = yes
+	flag = is_immortal
 	no_prowess_loss_from_age = yes
 
 	can_have_children = yes
@@ -43,6 +44,7 @@ immortality = {
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality_sterile = {
 	immortal = yes
+	flag = is_immortal
 	no_prowess_loss_from_age = yes
 
 	can_have_children = no
@@ -85,6 +87,7 @@ immortality_sterile = {
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortality_genetic = {
 	immortal = yes
+	flag = is_immortal
 	no_prowess_loss_from_age = yes
 
 	can_have_children = yes
@@ -127,6 +130,7 @@ immortality_genetic = {
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 immortal = {
 	immortal = yes
+	flag = is_immortal
 	no_prowess_loss_from_age = yes
 
 	can_have_children = yes
@@ -169,6 +173,7 @@ immortal = {
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 ageless = {
 	immortal = yes
+	flag = is_immortal
 	no_prowess_loss_from_age = yes
 
 	can_have_children = yes

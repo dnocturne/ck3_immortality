@@ -14,6 +14,10 @@ immortality_restorebodyandmind_effect = {
 
 	#Disability
 	if = {limit = {has_trait = infirm} remove_trait = infirm}
+	if = {limit = {has_trait = withering_mind} remove_trait = withering_mind}
+	if = {limit = {has_trait = clouded_eyes} remove_trait = clouded_eyes}
+	if = {limit = {has_trait = faltering_heart} remove_trait = faltering_heart}
+	if = {limit = {has_trait = fragile_bones} remove_trait = fragile_bones}
 	if = {limit = {has_trait = incapable} remove_trait = incapable}
 	if = {limit = {has_trait = scarred} remove_trait = scarred}
 	if = {limit = {has_trait = eunuch_1} remove_trait = eunuch_1}
