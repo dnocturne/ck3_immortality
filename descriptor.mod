@@ -1,6 +1,8 @@
-version="1.0.1"
+version="1.0.2"
 tags={
 	"1.19 'Scribe'"
+	"Gameplay"
+	"Decisions"
 }
 name="Immortality"
 picture="thumbnail.png"

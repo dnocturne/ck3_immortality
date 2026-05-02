@@ -35,6 +35,9 @@ immortality_restorebodyandmind_effect = {
 	if = {limit = {has_trait = early_great_pox} remove_trait = early_great_pox}
 	if = {limit = {has_trait = great_pox} remove_trait = great_pox}
 	if = {limit = {has_trait = pneumonic} remove_trait = pneumonic}
+	if = {limit = {has_trait = measles} remove_trait = measles}
+	if = {limit = {has_trait = dysentery} remove_trait = dysentery}
+	if = {limit = {has_trait = ergotism} remove_trait = ergotism}
 	if = {limit = {has_trait = ill} remove_trait = ill}
 	if = {limit = {has_trait = sickly} remove_trait = sickly}
 
@@ -52,6 +55,7 @@ immortality_restorebodyandmind_effect = {
 	#Health Modifiers - General
 	if = {limit = {has_character_modifier = infected_wound_modifier} remove_character_modifier = infected_wound_modifier}
 	if = {limit = {has_character_modifier = gangrene_modifier} remove_character_modifier = gangrene_modifier}
+	if = {limit = {has_character_modifier = brutal_castration_modifier} remove_character_modifier = brutal_castration_modifier}
 	if = {limit = {has_character_modifier = rejected_from_marriage_bed_modifier} remove_character_modifier = rejected_from_marriage_bed_modifier}
 	if = {limit = {has_character_modifier = exhausted_modifier} remove_character_modifier = exhausted_modifier}
 	if = {limit = {has_character_modifier = low_social_energy_modifier} remove_character_modifier = low_social_energy_modifier}
@@ -320,21 +324,6 @@ immortality_restorebodyandmind_extended_effect = {
 	#if = {limit = {has_trait = stubborn} remove_trait = stubborn}       #fickle
 	#if = {limit = {has_trait = cynical} remove_trait = cynical}         #zealous
 	#if = {limit = {has_trait = shy} remove_trait = shy}                 #gregarious
-
-	#Congenital problems
-	if = {limit = {has_trait = albino} remove_trait = albino}
-	if = {limit = {has_trait = lisping} remove_trait = lisping}
-	if = {limit = {has_trait = stuttering} remove_trait = stuttering}
-	if = {limit = {has_trait = giant} remove_trait = giant}
-	if = {limit = {has_trait = scaly} remove_trait = scaly}
-	if = {limit = {has_trait = clubfooted} remove_trait = clubfooted}
-	if = {limit = {has_trait = dwarf} remove_trait = dwarf}
-	if = {limit = {has_trait = hunchbacked} remove_trait = hunchbacked}
-	if = {limit = {has_trait = infertile} remove_trait = infertile}
-	if = {limit = {has_trait = wheezing} remove_trait = wheezing}
-	if = {limit = {has_trait = spindly} remove_trait = spindly}
-	if = {limit = {has_trait = bleeder} remove_trait = bleeder}
-	if = {limit = {has_trait = inbred} remove_trait = inbred}
 
 	#Add pure-blood if perfect physique, intellect, beauty
 	if = {
