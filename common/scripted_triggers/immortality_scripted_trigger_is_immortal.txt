@@ -27,44 +27,83 @@ is_immortal_extended = {
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 is_lifetime_lock_removal_needed = {
+	#Each check is wrapped in a custom_tooltip so the decision/interaction tooltip shows a readable list
+	#instead of raw flag and variable names
 	OR = {
-		has_character_flag = "used_lifetime_invasion"
-		has_character_flag = "used_lifetime_subjugation"
-		has_character_flag = "declared_major_religious_war_flag"
-
-		has_character_flag = "has_created_a_faith"
-		has_character_flag = "converted_culture_this_lifetime"
-
-		has_character_flag = "has_refunded_perks"
-
-		is_lifetime_vassal_lock_removal_needed = yes
+		custom_tooltip = {
+			text = immortality_lockout_invasion_tt
+			has_character_flag = "used_lifetime_invasion"
+		}
+		custom_tooltip = {
+			text = immortality_lockout_subjugation_tt
+			has_character_flag = "used_lifetime_subjugation"
+		}
+		custom_tooltip = {
+			text = immortality_lockout_holy_war_tt
+			has_character_flag = "declared_major_religious_war_flag"
+		}
+		custom_tooltip = {
+			text = immortality_lockout_faith_tt
+			exists = var:has_created_a_faith
+		}
+		custom_tooltip = {
+			text = immortality_lockout_culture_tt
+			has_character_flag = "converted_culture_this_lifetime"
+		}
+		custom_tooltip = {
+			text = immortality_lockout_perks_tt
+			has_character_flag = "has_refunded_perks"
+		}
+		#Mandala (All Under Heaven) - second aspect change costs a piety level
+		custom_tooltip = {
+			text = immortality_lockout_mandala_tt
+			exists = var:changed_aspect_once
+		}
+		custom_tooltip = {
+			text = immortality_lockout_contracts_tt
+			is_lifetime_vassal_lock_removal_needed = yes
+		}
 	}
 }
 #*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 is_lifetime_vassal_lock_removal_needed = {
 	OR = {
-		#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occurring with subject_contract_is_blocked_from_modification
+		#subject_contract_is_blocked_from_modification errors on characters without a subject contract, and tooltips evaluate every line of an AND
+		#So it only ever sits behind a trigger_if limit that confirms a modifiable contract exists
+		#trigger_else = { always = no } is needed because a trigger_if whose limit fails counts as true, which would make this whole OR true
 
-		#Self - for upstream feudal contract with liege, if present
-		trigger_if = {
-			limit = {
-				exists = liege
-				is_ruler = yes
-				vassal_contract_has_modifiable_obligations = yes
+		#Self - upstream contract with liege or suzerain, if present
+		AND = {
+			trigger_if = {
+				limit = {
+					is_ruler = yes
+					OR = {
+						is_independent_ruler = no
+						is_tributary = yes
+					}
+					subject_contract_has_modifiable_obligations = yes
+				}
+				subject_contract_is_blocked_from_modification = yes
 			}
-			subject_contract_is_blocked_from_modification = yes
+			trigger_else = { always = no }
 		}
 
 		#Vassals - Downstream
 		any_vassal = {
 			trigger_if = {
-				limit = {
-					exists = liege
-					is_ruler = yes
-					vassal_contract_has_modifiable_obligations = yes
-				}
+				limit = { subject_contract_has_modifiable_obligations = yes }
+				subject_contract_is_blocked_from_modification = yes
 			}
-			subject_contract_is_blocked_from_modification = yes
+			trigger_else = { always = no }
+		}
+
+		#Tributaries - Downstream
+		any_tributary = {
+			trigger_if = {
+				limit = { subject_contract_has_modifiable_obligations = yes }
+				subject_contract_is_blocked_from_modification = yes
+			}
+			trigger_else = { always = no }
 		}
 	}
 }

@@ -56,7 +56,6 @@ immortality_restorebodyandmind_effect = {
 	if = {limit = {has_character_modifier = infected_wound_modifier} remove_character_modifier = infected_wound_modifier}
 	if = {limit = {has_character_modifier = gangrene_modifier} remove_character_modifier = gangrene_modifier}
 	if = {limit = {has_character_modifier = brutal_castration_modifier} remove_character_modifier = brutal_castration_modifier}
-	if = {limit = {has_character_modifier = rejected_from_marriage_bed_modifier} remove_character_modifier = rejected_from_marriage_bed_modifier}
 	if = {limit = {has_character_modifier = exhausted_modifier} remove_character_modifier = exhausted_modifier}
 	if = {limit = {has_character_modifier = low_social_energy_modifier} remove_character_modifier = low_social_energy_modifier}
 	if = {limit = {has_character_modifier = lunatic_made_of_glass_modifier} remove_character_modifier = lunatic_made_of_glass_modifier}

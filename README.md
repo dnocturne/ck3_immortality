@@ -54,14 +54,15 @@ Because immortal characters can live far beyond a normal lifespan, this mod incl
 - Kingdom invasions
 - Kingdom subjugation wars
 - Kingdom holy wars
-- Faith creation
+- Faith or rite creation
 - Culture conversion
 - Lifestyle perk resets
-- Vassal contract modification blocks
+- Mandala aspect changes (All Under Heaven)
+- Vassal and tributary contract modification blocks
 
 ## Compatibility
 
-Built and tested for **Crusader Kings III 1.19.\***.
+Built and tested for **Crusader Kings III 1.20.\***.
 
 This mod mainly adds new traits, decisions, interactions, events, scripted effects, and icons. It should be compatible with many mods, but any mod that heavily changes immortality traits, disease immunity, age handling, health effects, or character interaction behavior may need testing.
 

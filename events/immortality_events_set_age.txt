@@ -649,12 +649,12 @@ immortality_lifetime_lock_removal.1 = {
 		name = immortality_lifetime_lock_removal.1.option.f
 		trigger = {
 			scope:scope_set_age = {
-				has_character_flag = has_created_a_faith
+				exists = var:has_created_a_faith
 			}
 		}
 
 		scope:scope_set_age = {
-			remove_character_flag = has_created_a_faith
+			remove_variable = has_created_a_faith
 		}
 
 		trigger_event = immortality_lifetime_lock_removal.1
@@ -701,10 +701,28 @@ immortality_lifetime_lock_removal.1 = {
 			remove_character_flag = "had_intrigue_temptation_special_1000_this_lifetime"
 			remove_character_flag = "had_learning_medicine_special_1001_this_lifetime"
 			remove_character_flag = "had_learning_scholarship_special_2001_this_lifetime"
+			remove_character_flag = "had_learning_scholarship_special_3001_this_lifetime"
 			remove_character_flag = "had_learning_theology_special_1001_this_lifetime"
+			remove_character_flag = "had_learning_theology_special_1101_this_lifetime"
 			remove_character_flag = "had_diplomacy_family_special_2200_this_lifetime"
+			remove_character_flag = "had_diplomacy_family_2400_this_lifetime"
 			remove_character_flag = "had_diplomacy_foreign_special_1017_this_lifetime"
 			remove_character_flag = "had_diplomacy_majesty_special_1010_this_lifetime"
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
+		name = immortality_lifetime_lock_removal.1.option.m
+		trigger = {
+			scope:scope_set_age = {
+				exists = var:changed_aspect_once
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_variable = changed_aspect_once
 		}
 
 		trigger_event = immortality_lifetime_lock_removal.1
@@ -719,37 +737,38 @@ immortality_lifetime_lock_removal.1 = {
 		}
 
 		scope:scope_set_age = {
-			#Nesting of ifs/limits/triggers is to prevent massive spam in the error log about vassals not having modifiable contracts occurring with subject_contract_is_blocked_from_modification
+			#Each limit confirms a modifiable contract exists before asking if it is blocked, to prevent error log spam from subject_contract_is_blocked_from_modification
 
-			#Self - for upstream feudal contract with liege, if present
+			#Self - upstream contract with liege or suzerain, if present
 			if = {
 				limit = {
-					exists = liege
 					is_ruler = yes
-					vassal_contract_has_modifiable_obligations = yes
-				}
-				if = {
-					limit = {
-						subject_contract_is_blocked_from_modification = yes
+					OR = {
+						is_independent_ruler = no
+						is_tributary = yes
 					}
-					set_subject_contract_modification_blocked = no
+					subject_contract_has_modifiable_obligations = yes
+					subject_contract_is_blocked_from_modification = yes
 				}
+				set_subject_contract_modification_blocked = no
 			}
 
 			#Vassals - Downstream
 			every_vassal = {
 				limit = {
-					vassal_contract_has_modifiable_obligations = yes
+					subject_contract_has_modifiable_obligations = yes
 					subject_contract_is_blocked_from_modification = yes
 				}
-				if = {
-					limit = {
-						exists = liege
-						is_ruler = yes
-						vassal_contract_has_modifiable_obligations = yes
-					}
-					set_subject_contract_modification_blocked = no
+				set_subject_contract_modification_blocked = no
+			}
+
+			#Tributaries - Downstream
+			every_tributary = {
+				limit = {
+					subject_contract_has_modifiable_obligations = yes
+					subject_contract_is_blocked_from_modification = yes
 				}
+				set_subject_contract_modification_blocked = no
 			}
 		}
 

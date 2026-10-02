@@ -259,6 +259,7 @@ lifetime_lock_removal_interaction = {
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
 	ai_will_do = { base = 0 }
+	desc = lifetime_lock_removal_interaction_desc
 	#custom_tooltip = lifetime_lock_removal_interaction_tooltip
 
 	is_shown = {
@@ -271,6 +272,7 @@ lifetime_lock_removal_interaction = {
 
 	is_valid = {
 		scope:recipient = {
+			#Tooltip lists every resettable lockout, ticking the ones that apply
 			is_lifetime_lock_removal_needed = yes
 		}
 	}

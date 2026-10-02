@@ -52,10 +52,11 @@
  immortality_lifetime_lock_removal.1.option.w1:0 "Kingdom invasion."
  immortality_lifetime_lock_removal.1.option.w2:0 "Kingdom subjugation."
  immortality_lifetime_lock_removal.1.option.w3:0 "Kingdom holy war."
- immortality_lifetime_lock_removal.1.option.f:0 "Create a new faith."
+ immortality_lifetime_lock_removal.1.option.f:0 "Create a new faith or rite."
  immortality_lifetime_lock_removal.1.option.c:0 "Convert to another culture."
  immortality_lifetime_lock_removal.1.option.p:0 "Reset lifestyle perks."
- immortality_lifetime_lock_removal.1.option.v:0 "Modify vassal contracts."
+ immortality_lifetime_lock_removal.1.option.m:0 "Change my Mandala aspect without losing piety."
+ immortality_lifetime_lock_removal.1.option.v:0 "Modify vassal and tributary contracts."
  immortality_lifetime_lock_removal.1.option.d:0 "Done with once-in-a-lifetime lockout resets."
 
  #immortality_set_age.3.desc:0 "I may be immortal, but that doesn't mean I have to look as I do. What's wrong with me looking a bit older or younger while I'm at it? Chronological Age: [recipient.GetAge] | Physiological Age: [recipient.var:immortal_age] | [recipient.getvariable.immortal_age]"
