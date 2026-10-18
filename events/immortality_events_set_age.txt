@@ -661,6 +661,21 @@ immortality_lifetime_lock_removal.1 = {
 	}
 	#*=*=*=*=*=*=*=*=*=*
 	option = {
+		name = immortality_lifetime_lock_removal.1.option.r
+		trigger = {
+			scope:scope_set_age = {
+				exists = var:has_edited_a_rite
+			}
+		}
+
+		scope:scope_set_age = {
+			remove_variable = has_edited_a_rite
+		}
+
+		trigger_event = immortality_lifetime_lock_removal.1
+	}
+	#*=*=*=*=*=*=*=*=*=*
+	option = {
 		name = immortality_lifetime_lock_removal.1.option.c
 		trigger = {
 			scope:scope_set_age = {

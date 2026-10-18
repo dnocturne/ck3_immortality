@@ -1,4 +1,4 @@
-version="1.0.3"
+version="1.0.4"
 tags={
 	"1.20 'Crozier'"
 	"Gameplay"

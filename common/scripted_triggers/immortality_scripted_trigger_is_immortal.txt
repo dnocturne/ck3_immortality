@@ -46,6 +46,11 @@ is_lifetime_lock_removal_needed = {
 			text = immortality_lockout_faith_tt
 			exists = var:has_created_a_faith
 		}
+		#Set by vanilla on_rite_edited - only the Head of Rite can edit, once per lifetime
+		custom_tooltip = {
+			text = immortality_lockout_rite_edit_tt
+			exists = var:has_edited_a_rite
+		}
 		custom_tooltip = {
 			text = immortality_lockout_culture_tt
 			has_character_flag = "converted_culture_this_lifetime"

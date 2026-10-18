@@ -55,6 +55,7 @@ Because immortal characters can live far beyond a normal lifespan, this mod incl
 - Kingdom subjugation wars
 - Kingdom holy wars
 - Faith or rite creation
+- Rite editing
 - Culture conversion
 - Lifestyle perk resets
 - Mandala aspect changes (All Under Heaven)

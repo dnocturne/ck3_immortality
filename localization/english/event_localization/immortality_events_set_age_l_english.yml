@@ -53,6 +53,7 @@
  immortality_lifetime_lock_removal.1.option.w2:0 "Kingdom subjugation."
  immortality_lifetime_lock_removal.1.option.w3:0 "Kingdom holy war."
  immortality_lifetime_lock_removal.1.option.f:0 "Create a new faith or rite."
+ immortality_lifetime_lock_removal.1.option.r:0 "Edit my rite's tenets and doctrines again."
  immortality_lifetime_lock_removal.1.option.c:0 "Convert to another culture."
  immortality_lifetime_lock_removal.1.option.p:0 "Reset lifestyle perks."
  immortality_lifetime_lock_removal.1.option.m:0 "Change my Mandala aspect without losing piety."

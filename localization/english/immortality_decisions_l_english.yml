@@ -60,7 +60,7 @@
  restore_body_auto_off_decision_confirm:0 "Disable yearly auto-restore body and mind."
 
  lifetime_lock_removal_decision:0 "Reset once-in-a-lifetime lockouts"
- lifetime_lock_removal_decision_tooltip:0 "Reset lifetime lockouts - kingdom holy wars, kingdom invasions, kingdom subjugation, vassal and tributary contract renegotiation blocks, perk reset, perk events, create religion or rite, change culture, Mandala aspect change"
+ lifetime_lock_removal_decision_tooltip:0 "Reset lifetime lockouts - kingdom holy wars, kingdom invasions, kingdom subjugation, vassal and tributary contract renegotiation blocks, perk reset, perk events, create religion or rite, edit rite, change culture, Mandala aspect change"
  lifetime_lock_removal_decision_desc:0 "Are you ready to declare kingdom conquest wars and partake in other once in a lifetime activities once again?"
  lifetime_lock_removal_decision_effect_tooltip:0 "You will be able to declare kingdom conquest wars and partake in other once in a lifetime activities once again."
  lifetime_lock_removal_decision_confirm:0 "Start event to remove once-in-a-lifetime lockouts"
